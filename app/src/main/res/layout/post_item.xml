@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profile"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@id/profile_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27/02/2022"
+                android:layout_marginStart="8dp"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@id/profile_image"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                />
+
+            <TextView
+                android:id="@+id/text"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:text="Your TextNow number is the number that you'll want to give to your friends and family to call and text you, and that's the number that your calls and texts will come from. ... This number is used to connect your phone to the network."
+                android:textColor="@color/black"
+                android:justificationMode="inter_word"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:visibility="gone"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/placehol"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text" />
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/profile_image"
+                app:layout_constraintBottom_toBottomOf="@id/profile_image"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
